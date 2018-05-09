@@ -52,7 +52,11 @@ alexa.find_my_cars()
 pete.find_my_cars()
 ```
 
-Great work! Now, let's try this out with another domain to get even more practice. Let's work with a `Driver` and a `Trip` class. The relationship between the two should be that a driver has many trips and that a trip belongs to one driver. A driver should be instantiated with at least a *name* and a trip should be instantiated with at least a starting point and a destination (i.e. `home` to `school`). Remember a trip should know which driver it belongs to and the Trip class should keep track of all trip instances in the `_all` class variable. Define the appropriate getter and setter instance methods for both the driver and trip instance objects as well as a class method, `all`, that returns the `_all` list. 
+Great work! Now, let's try this out with another domain to get even more practice. Let's work with a `Driver` and a `Trip` class. 
+* The relationship between the two should be that a driver has many trips and that a trip belongs to one driver. 
+* A driver should be instantiated with at least a *name* and a trip should be instantiated with at least a start and a destination (i.e. `battery park` to `central park`). 
+* Remember a trip should know which **driver** it belongs to and the Trip class should keep track of all trip instances in the `_all` class variable. 
+* Define the appropriate getter and setter instance methods for both the driver and trip instance objects as well as a class method, `all`, that returns the `_all` list. 
 
 
 ```python
