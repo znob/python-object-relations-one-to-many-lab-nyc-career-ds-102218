@@ -68,5 +68,5 @@ class TestOneToManyRelationships(unittest.TestCase):
     def test_my_trips_instance_method(self):
         self.assertItemsEqual(driver_1.my_trips(), [trip_1, trip_2, trip_3])
 
-    def test_find_my_cars_instance_method(self):
-        self.assertItemsEqual(driver_1.my_trip_summaries(), ["11 Broadway, NY, NY to 123 Smith Street, BK, NY", "Pier 11 Ferry to Battery Park", "Wall Street to Lincoln Center"])
+    def test_my_trip_summaries_instance_method(self):
+        self.assertItemsEqual(driver_1.my_trip_summaries(), ['11 Broadway, NY, NY to 123 Smith Street, BK, NY', 'Pier 11 Ferry to Battery Park', 'Wall Street to Lincoln Center'])
