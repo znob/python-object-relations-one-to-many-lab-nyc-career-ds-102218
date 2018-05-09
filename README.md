@@ -4,7 +4,7 @@
 ## Introduction
 In this lab we are going to practice creating a one to many relationship. We've learned how a belongs to relationship works -- with the belongs to class knowing the one instance is is associated with. Now what if we thing about it from the other side? Let's say we are talking about a `Person` class and a `Dog` class. We know the `Dog` belongs to one `Person`, but that doesn't mean the person can't have more than one dog, right?
 
-![dog gif](two-dogs.gif)
+![dog gif](https://s3.amazonaws.com/learn-verified/data-science-assets/two-dogs.gif)
 
 So, a dog still needs to know who its owner is, but we now know that an owner can have **many** dogs. Let's get started!
 
