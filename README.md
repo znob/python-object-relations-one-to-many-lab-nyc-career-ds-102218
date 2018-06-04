@@ -35,12 +35,6 @@ pete = Owner("Pete", 30)
 from car import Car
 # create several instances of the Car class and associate them to owners. 
 # remember owners can have more than one car associated with them, but a car can only have one owner
-
-maserati = Car("Maserati", "GranTurismo", 2018, jake)
-camry = Car("Toyota", "Camry", 2012, jess)
-benz = Car("Mercedes", "E-class", 2000, alexa)
-corolla = Car("Toyota", "Corolla", 2003, alexa)
-porsche = Car("Porsche", "Panamera", 2016, pete)
 ```
 
 ## Querying For Our Cars
@@ -77,10 +71,6 @@ hortense = Driver("Hortense")
 from trip import Trip
 # create several instances of the Trip class and associate them to drivers. 
 # remember to associate a trip with a driver
-
-gct = Trip('11 Broadway', 'Grand Central Terminal', steve)
-stuytown = Trip('11 Broadway', 'StuyTown', danielle)
-msg = Trip('11 Broadway', 'Madison Square Garden', steve)
 ```
 
 Next, define a driver instance method that returns all the trips instance objects that a driver has given, let's call it `my_trips`. Then define an instance method that returns a list of strings that represent the trips start and end locations for each of those trips (i.e. `[home to work, work to movies]`). Let's call it `my_trip_summaries`.
