@@ -2,22 +2,22 @@
 # Python Object Relationships - One to Many
 
 ## Introduction
-In this lab we are going to practice creating a one to many relationship. We've learned how a belongs to relationship works -- with the belongs to class knowing the one instance is is associated with. Now what if we thing about it from the other side? Let's say we are talking about a `Person` class and a `Dog` class. We know the `Dog` belongs to one `Person`, but that doesn't mean the person can't have more than one dog, right?
+In this lab we are going to practice creating a one to many relationship. We've learned how a belongs to relationship works -- with the "belongs to" class knowing the one instance it is associated with. Now, what if we think about it from the other side? Let's say we are talking about a `Person` class and a `Dog` class. We know the `Dog` belongs to one `Person`, but that doesn't mean the person can't have more than one dog, right?
 
 ![dog gif](https://s3.amazonaws.com/learn-verified/data-science-assets/two-dogs.gif)
 
-So, a dog still needs to know who its owner is, but we now know that an owner can have **many** dogs. Let's get started!
+So, a dog still needs to know who its owner is, but now we know that an owner can also have **many** dogs. Let's get started!
 
 ## Objectives
 * Create a one to many domain model
-* Practice querying an intance to demonstrate the one to many relationship
+* Practice querying an instance to demonstrate the one to many relationship
 * Define a second one to many domain and create instance methods that again demonstrate the one to many relationship
 
 ## Defining Our Classes
 
 Let's start by defining two classes, `Owner` and `Car`. 
-* An owner should be instantiated with at least a `name` and an `age`. 
-* A car should be instantiated with at least a `make`, `model`, and `year`. 
+* An owner should be instantiated with a `name` and an `age`. 
+* A car should be instantiated with a `make`, `model`, and `year`. 
 * The relationship between the two classes should be such that an owner has many cars and a car belongs to an owner. It is our job to make sure our classes and instances are set up to show this. 
 * Think about which class(es) also must have an `_all` class variable, and be sure to have setter and getter (read and write) instance methods for each attribute for an owner and for a car as well as a class method that returns the `_all` list.
 
@@ -35,6 +35,12 @@ pete = Owner("Pete", 30)
 from car import Car
 # create several instances of the Car class and associate them to owners. 
 # remember owners can have more than one car associated with them, but a car can only have one owner
+
+maserati = Car("Maserati", "GranTurismo", 2018, jake)
+camry = Car("Toyota", "Camry", 2012, jess)
+benz = Car("Mercedes", "E-class", 2000, alexa)
+corolla = Car("Toyota", "Corolla", 2003, alexa)
+porsche = Car("Porsche", "Panamera", 2016, pete)
 ```
 
 ## Querying For Our Cars
@@ -69,8 +75,12 @@ hortense = Driver("Hortense")
 
 ```python
 from trip import Trip
-# create trip instances here
+# create several instances of the Trip class and associate them to drivers. 
 # remember to associate a trip with a driver
+
+gct = Trip('11 Broadway', 'Grand Central Terminal', steve)
+stuytown = Trip('11 Broadway', 'StuyTown', danielle)
+msg = Trip('11 Broadway', 'Madison Square Garden', steve)
 ```
 
 Next, define a driver instance method that returns all the trips instance objects that a driver has given, let's call it `my_trips`. Then define an instance method that returns a list of strings that represent the trips start and end locations for each of those trips (i.e. `[home to work, work to movies]`). Let's call it `my_trip_summaries`.
